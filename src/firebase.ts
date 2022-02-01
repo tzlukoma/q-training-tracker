@@ -5,13 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCz_eX8MhDCNWh5nUh80kQlN9sR4xP5Dg8",
-    authDomain: "coachq-tracker-data.firebaseapp.com",
-    projectId: "coachq-tracker-data",
-    storageBucket: "coachq-tracker-data.appspot.com",
-    messagingSenderId: "376332854288",
-    appId: "1:376332854288:web:c1135592af4dd936701695"
-};
-
+    apiKey: process.env.FIREBASE_API_KEY,
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.FIREBASE_APP_ID
+}
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
